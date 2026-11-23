@@ -1,0 +1,43 @@
+Source: rdiskinfo-bin
+Section: utils
+Priority: optional
+Maintainer: Yuri Nogueira <personal@yurinogueira.dev.br>
+Build-Depends: debhelper-compat (= 13), zstd
+Standards-Version: 4.6.2
+Homepage: https://github.com/yurinogueira/RDiskInfo
+Vcs-Git: https://github.com/yurinogueira/rdiskinfo-bin.git
+Vcs-Browser: https://github.com/yurinogueira/rdiskinfo-bin
+
+Package: rdiskinfo
+Architecture: amd64
+Depends:
+ ${misc:Depends},
+ libc6 (>= 2.35),
+ libgcc-s1 (>= 4.2),
+ smartmontools,
+ util-linux,
+ pkexec | policykit-1,
+ libfontconfig1,
+ libgl1,
+ libegl1,
+ libxkbcommon0,
+ hicolor-icon-theme
+Recommends:
+ xdg-desktop-portal | zenity,
+ libwayland-client0,
+ libx11-6,
+ libxcursor1,
+ libxi6,
+ libxkbcommon-x11-0
+Provides: rdiskinfo-bin
+Conflicts: rdiskinfo-bin
+Replaces: rdiskinfo-bin
+Description: Cross-protocol Linux S.M.A.R.T. and disk diagnostics viewer
+ RDiskInfo is a native Linux S.M.A.R.T. and hardware disk inspector written
+ in Rust (egui/eframe), inspired by CrystalDiskInfo and QDiskInfo.
+ .
+ Features full telemetry for ATA/SATA, NVMe, and SCSI/SAS/USB drives via
+ smartmontools (smartctl), sysfs, lsblk, and hwmon, S.M.A.R.T. self-test
+ execution, raw ioctl ASCII/Hex viewer, JSON/TXT/PNG export, automatic
+ on-demand privilege elevation via pkexec, 6 built-in themes, and 8 UI
+ languages.

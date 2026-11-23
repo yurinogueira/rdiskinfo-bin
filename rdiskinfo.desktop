@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=RDiskInfo
+GenericName=S.M.A.R.T. Disk Inspector
+Comment=ATA, NVMe & SCSI S.M.A.R.T. health and hardware viewer
+Icon=rdiskinfo
+Exec=rdiskinfo
+StartupWMClass=rdiskinfo
+Terminal=false
+Categories=System;Monitor;
+Keywords=smart;disk;ssd;nvme;hdd;health;temperature;

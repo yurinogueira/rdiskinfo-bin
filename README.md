@@ -27,7 +27,7 @@ Este pacote utiliza o artefato oficial publicado nas releases do GitHub (`rdiski
 
 ## Instalação
 
-### Via AUR Helper (`paru` ou `yay`)
+### Arch Linux / CachyOS / Manjaro — Via AUR Helper (`paru` ou `yay`)
 
 ```bash
 paru -S rdiskinfo-bin
@@ -35,12 +35,20 @@ paru -S rdiskinfo-bin
 yay -S rdiskinfo-bin
 ```
 
-### Manualmente via `makepkg`
+### Arch Linux — Manualmente via `makepkg`
 
 ```bash
 git clone https://aur.archlinux.org/rdiskinfo-bin.git
 cd rdiskinfo-bin
 makepkg -si
+```
+
+### Ubuntu / Kubuntu / Linux Mint / Pop!_OS 22.04+ (Launchpad PPA)
+
+```bash
+sudo add-apt-repository ppa:yurinogueira/rdiskinfo
+sudo apt update
+sudo apt install rdiskinfo
 ```
 
 ---

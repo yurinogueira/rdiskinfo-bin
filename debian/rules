@@ -1,0 +1,28 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	zstd -d -q -f -k rdiskinfo.zst -o rdiskinfo
+	chmod 755 rdiskinfo
+
+override_dh_auto_install:
+	install -Dm755 rdiskinfo debian/rdiskinfo/usr/bin/rdiskinfo
+	install -Dm644 rdiskinfo.desktop debian/rdiskinfo/usr/share/applications/rdiskinfo.desktop
+	install -Dm644 rdiskinfo.png debian/rdiskinfo/usr/share/icons/hicolor/512x512/apps/rdiskinfo.png
+	install -Dm644 rdiskinfo.png debian/rdiskinfo/usr/share/pixmaps/rdiskinfo.png
+	install -Dm644 io.github.yurinogueira.rdiskinfo.policy debian/rdiskinfo/usr/share/polkit-1/actions/io.github.yurinogueira.rdiskinfo.policy
+	install -Dm644 README.md debian/rdiskinfo/usr/share/doc/rdiskinfo/README.md
+
+override_dh_dwz:
+	# Skip dwz on pre-compiled stripped Rust binary
+
+override_dh_strip:
+	# Binary in rdiskinfo.zst is already stripped
+
+override_dh_shlibdeps:
+	# Runtime shared libraries are loaded via dlopen and declared explicitly in debian/control
+
+override_dh_auto_clean:
+	rm -f rdiskinfo

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
+<policyconfig>
+  <vendor>RDiskInfo</vendor>
+  <vendor_url>https://github.com/yurinogueira/RDiskInfo</vendor_url>
+  <action id="io.github.yurinogueira.rdiskinfo.pkexec">
+    <description>Run RDiskInfo privileged S.M.A.R.T. helper</description>
+    <description xml:lang="pt_BR">Executar o assistente privilegiado S.M.A.R.T. do RDiskInfo</description>
+    <description xml:lang="es">Ejecutar el asistente privilegiado S.M.A.R.T. de RDiskInfo</description>
+    <description xml:lang="fr">Exécuter l'assistant privilégié S.M.A.R.T. de RDiskInfo</description>
+    <description xml:lang="de">Privilegierten S.M.A.R.T.-Helfer von RDiskInfo ausführen</description>
+    <description xml:lang="it">Esegui l'assistente privilegiato S.M.A.R.T. di RDiskInfo</description>
+    <description xml:lang="ja">RDiskInfo の特権 S.M.A.R.T. ヘルパーを実行</description>
+    <description xml:lang="zh_CN">运行 RDiskInfo 特权 S.M.A.R.T. 助手</description>
+    <message>Authentication is required to read S.M.A.R.T. disk health data and run disk diagnostics</message>
+    <message xml:lang="pt_BR">Autenticação necessária para ler dados de saúde S.M.A.R.T. e executar diagnósticos de disco</message>
+    <message xml:lang="es">Se requiere autenticación para leer los datos de salud S.M.A.R.T. y ejecutar diagnósticos de disco</message>
+    <message xml:lang="fr">Une authentification est requise pour lire les données S.M.A.R.T. et exécuter des diagnostics de disque</message>
+    <message xml:lang="de">Authentifizierung erforderlich, um S.M.A.R.T.-Zustandsdaten auszulesen und Festplattendiagnosen auszuführen</message>
+    <message xml:lang="it">Autenticazione richiesta per leggere i dati S.M.A.R.T. ed eseguire la diagnostica del disco</message>
+    <message xml:lang="ja">S.M.A.R.T. 健康状態の読み取りとディスク診断の実行には認証が必要です</message>
+    <message xml:lang="zh_CN">读取 S.M.A.R.T. 磁盘健康数据并执行磁盘诊断需要身份验证</message>
+    <icon_name>rdiskinfo</icon_name>
+    <defaults>
+      <allow_any>auth_admin</allow_any>
+      <allow_inactive>auth_admin</allow_inactive>
+      <allow_active>auth_admin</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/bin/rdiskinfo</annotate>
+  </action>
+</policyconfig>

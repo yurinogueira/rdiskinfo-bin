@@ -1,0 +1,20 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: RDiskInfo
+Upstream-Contact: Yuri Nogueira <personal@yurinogueira.dev.br>
+Source: https://github.com/yurinogueira/RDiskInfo
+
+Files: *
+Copyright: 2026 Yuri Nogueira <personal@yurinogueira.dev.br>
+License: GPL-3.0+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be applicable,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ On Debian and Ubuntu systems, the complete text of the GNU General
+ Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".

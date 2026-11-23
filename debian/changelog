@@ -1,0 +1,8 @@
+rdiskinfo-bin (0.1.0) noble; urgency=medium
+
+  * Initial release of RDiskInfo v0.1.0 for Ubuntu / Kubuntu / Linux Mint /
+    Pop!_OS (22.04+, 24.04+, 26.04+).
+  * Cross-protocol Linux S.M.A.R.T. and disk diagnostics viewer (ATA/SATA,
+    NVMe, SCSI/SAS/USB) with desktop entry, 512x512 icon, and Polkit policy.
+
+ -- Yuri Nogueira <personal@yurinogueira.dev.br>  Sun, 22 Nov 2026 23:30:00 -0300
